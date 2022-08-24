@@ -1,0 +1,613 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>REGULAR EXPRESSIONS</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>REGULAR EXPRESSIONS</section>
+
+			<section>
+				<h4>regex examples</h4>
+				<pre style="width: 100%;">
+					<code>
+/Mary/gi
+/123456/
+/^\d\d:\d\d$/m -- 12:34 or 01:22 or 07:07
+/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/g --for emails
+/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/ --for phone numbers
+					</code>
+			</pre>
+			</section>
+
+			<section>
+				<h5>
+					simple regexps
+				</h5>
+				<section data-auto-animate>
+					<img src="./assets/simpleExample1.PNG" alt="simpleExample1">
+					<div style="font-size: 20px;">here and further we will use <a href="https://regex101.com/">regex101.com</a>
+					</div>
+				</section>
+
+				<section data-auto-animate>
+					<img src="./assets/simpleExample2.PNG" alt="simpleExample2">
+				</section>
+
+				<section data-auto-animate>
+					<img src="./assets/simpleExample3.PNG" alt="simpleExample3">
+				</section>
+			</section>
+
+			<!--! --------------------------------------------------->
+			<!--! --------------------------------------------------->
+			<!--! --------------------------------------------------->
+
+			<section>
+				<h5 style="font-size: 23px;">Anchors: string start ^ and end $. Word boundary</h5>
+				<section>
+					<img src="./assets/anchors1.PNG" alt="anchors1">
+					<img src="./assets/anchors2.PNG" alt="anchors2">
+					<img src="./assets/anchors3.PNG" alt="anchors3">
+				</section>
+
+				<section>
+					<img src="./assets/anchors4.PNG" alt="anchors4">
+					<img src="./assets/anchors5.PNG" alt="anchors5">
+				</section>
+
+				<section>
+					<img src="./assets/anchors.PNG" alt="anchors">
+				</section>
+				<section>
+					<img src="./assets/anchors.PNG" alt="anchors">
+				</section>
+				<section>
+					<img src="./assets/anchors.PNG" alt="anchors">
+				</section>
+			</section>
+
+			<!--! -------------------SETS AND RANGES-------------------------------->
+			<!--! -------------------SETS AND RANGES-------------------------------->
+			<!--! -------------------SETS AND RANGES-------------------------------->
+
+			<section>
+				<h5>Sets and Ranges</h5>
+				<section data-auto-animate>
+					<img src="./assets/setsAndRanges1.PNG" alt="setsAndRanges1">
+				</section>
+
+				<section data-auto-animate>
+					<img src="./assets/setsAndRanges2.PNG" alt="setsAndRanges2">
+				</section>
+
+				<section data-auto-animate>
+					<img src="./assets/setsAndRanges3.PNG" alt="setsAndRanges3">
+				</section>
+
+				
+				<section data-auto-animate>
+					<img src="./assets/setsAndRanges4.PNG" alt="setsAndRanges4">
+				</section>
+
+				<section data-auto-animate>
+					<img src="./assets/setsAndRanges5.PNG" alt="setsAndRanges5">
+				</section>
+
+				<section data-auto-animate>
+					<img src="./assets/setsAndRanges6.PNG" alt="setsAndRanges6">
+				</section>
+
+				<section data-auto-animate>
+					<img src="./assets/setsAndRanges7.PNG" alt="setsAndRanges7">
+				</section>
+
+				<section data-auto-animate>
+					<img src="./assets/setsAndRanges8.PNG" alt="setsAndRanges8">
+				</section>
+
+				<section data-auto-animate>
+					<img src="./assets/setsAndRanges9.PNG" alt="setsAndRanges9">
+				</section>
+
+				<section data-auto-animate>
+					<img src="./assets/setsAndRanges10.PNG" alt="setsAndRanges10">
+				</section>
+
+				<section data-auto-animate>
+					<img src="./assets/setsAndRanges11.PNG" alt="setsAndRanges11">
+				</section>
+
+				<section data-auto-animate>
+					<img src="./assets/setsAndRanges12.PNG" alt="setsAndRanges12">
+				</section>
+
+				<section data-auto-animate>
+					<img src="./assets/setsAndRanges13.PNG" alt="setsAndRanges13">
+				</section>
+
+				<section data-auto-animate>
+					<img src="./assets/setsAndRanges14.PNG" alt="setsAndRanges14">
+				</section>
+			</section>
+
+			<!--! -------------------Character classes-------------------------------->
+			<!--! -------------------Character classes-------------------------------->
+			<!--! -------------------Character classes-------------------------------->
+
+			<section style="font-size: 26px;" data-auto-animate>
+				<h5>Character classes</h5>
+				<section>
+					<table style="font-size: 20px;">
+						<tr>
+							<th>Characters</th>
+							<th>Meaning</th>
+						</tr>
+						<tr>
+							<td>\d</td>
+							<td>Matches any digit (Arabic numeral). Equivalent to [0-9]</td>
+						</tr>
+						<tr>
+							<td>\D</td>
+							<td>Matches any character that is NOT a digit (Arabic numeral).  Equivalent to [^0-9]</td>
+						</tr>
+						<tr>
+							<td>\s</td>
+							<td>Matches a single white space character, including space, tab, form feed, line feed, and other Unicode
+								spaces. Equivalent to [ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff].</td>
+						</tr>
+						<tr>
+							<td>\S</td>
+							<td>Matches any character that is NOT a single white space character, including space, tab, form feed,
+								line feed, and other Unicode spaces. Equivalent to [^ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff].</td>
+						</tr>
+						<tr>
+							<td>\w</td>
+							<td>Matches any alphanumeric character from the basic Latin alphabet and underscore. Equivalent to [A-Za-z0-9_]</td>
+						</tr>
+						<tr>
+							<td>\W</td>
+							<td>Matches any character that is NOT alphanumeric character from the basic Latin alphabet and underscore. Equivalent to [^A-Za-z0-9_].
+							</td>
+						</tr>
+						<tr>
+							<td>.</td>
+							<td>Matches any single character except line terminators: \n, \r, \u2028 or \u2029</td>
+						</tr>
+						<tr>
+							<td>\t</td>
+							<td>Matches a horizontal tab.</td>
+						</tr>
+						<tr>
+							<td>\r</td>
+							<td>Matches a carriage return.</td>
+						</tr>
+						<tr>
+							<td>\n</td>
+							<td>Matches a linefeed.</td>
+						</tr>
+					</table>
+					<div>...and some other rarely used cases you can check on <a
+							href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Regular_Expressions">MDN</a></div>
+				</section>
+
+				<section data-auto-animate>
+					<img src="./assets/characterClasses1.PNG" alt="characterClasses1">
+				</section>
+	
+				<section data-auto-animate>
+					<img src="./assets/characterClasses1_1.PNG" alt="characterClasses1_1">
+				</section>
+	
+				<section data-auto-animate>
+					<img src="./assets/characterClasses1_2.PNG" alt="characterClasses1_2">
+				</section>
+	
+				<section data-auto-animate>
+					<img src="./assets/characterClasses2.PNG" alt="characterClasses2">
+				</section>
+	
+				<section data-auto-animate>
+					<img src="./assets/characterClasses3.PNG" alt="characterClasses3">
+				</section>
+	
+				<section data-auto-animate>
+					<img src="./assets/characterClasses4.PNG" alt="characterClasses4">
+				</section>
+	
+				<section data-auto-animate>
+					<img src="./assets/characterClasses5.PNG" alt="characterClasses5">
+				</section>
+	
+				<section data-auto-animate>
+					<img src="./assets/characterClasses6.PNG" alt="characterClasses6">
+				</section>
+	
+				<section data-auto-animate>
+					<img src="./assets/characterClasses7_1.PNG" alt="characterClasses7_1">
+				</section>
+	
+				<section data-auto-animate>
+					<img src="./assets/characterClasses7_2.PNG" alt="characterClasses7_2">
+				</section>
+	
+				<section data-auto-animate>
+					<img src="./assets/characterClasses8_1.PNG" alt="characterClasses8_1">
+				</section>
+	
+				<section data-auto-animate>
+					<img src="./assets/characterClasses8_2.PNG" alt="characterClasses8_2">
+				</section>
+	
+				<section data-auto-animate>
+					<img src="./assets/characterClasses8_3.PNG" alt="characterClasses8_3">
+				</section>
+			</section>
+
+			<!--! -------------------QUANTIFIERS-------------------------------->
+			<!--! -------------------QUANTIFIERS-------------------------------->
+			<!--! -------------------QUANTIFIERS-------------------------------->
+
+			<section>
+				<h5>Quantifiers</h5>
+				
+				<section>
+					<img src="./assets/quantifiers1.PNG" alt="quantifiers1">
+				</section>
+
+				<section>
+					<img src="./assets/quantifiers2.PNG" alt="quantifiers2">
+				</section>
+
+				<section>
+					<img src="./assets/quantifiers3.PNG" alt="quantifiers3">
+				</section>
+
+				<section>
+					<img src="./assets/quantifiers4.PNG" alt="quantifiers4">
+				</section>
+
+				<section>
+					<img src="./assets/quantifiers5.PNG" alt="quantifiers5">
+				</section>
+
+				<section>
+					<img src="./assets/quantifiers6.PNG" alt="quantifiers6">
+				</section>
+
+				<section>
+					<img src="./assets/quantifiers7.PNG" alt="quantifiers7">
+				</section>
+
+				<section>
+					<img src="./assets/quantifiers8.PNG" alt="quantifiers8">
+				</section>
+
+				<section>
+					<img src="./assets/quantifiers9.PNG" alt="quantifiers9">
+				</section>
+			</section>
+
+			<section>
+				<h5>Capturing groups</h5>
+				<section>
+					<img src="./assets/capturingGroups1.PNG" alt="capturingGroups1">
+				</section>
+				<section>
+					<img src="./assets/capturingGroups2.PNG" alt="capturingGroups2">
+				</section>
+			</section>
+
+			<section>
+				<h5>Alternation</h5>
+				<section>
+					<img src="./assets/alternation1.PNG" alt="alternation1">
+				</section>
+
+				<section>
+					<img src="./assets/alternation2.PNG" alt="alternation2">
+					<img src="./assets/alternation3.PNG" alt="alternation3">
+				</section>
+
+				<section>
+					<img src="./assets/alternation4.PNG" alt="alternation4">
+				</section>
+			</section>
+
+			<!--! -------------------JS METHODS-------------------------------->
+			<!--! -------------------JS METHODS-------------------------------->
+			<!--! -------------------JS METHODS-------------------------------->
+			<section>
+				<h4>creating a regular expression in JS</h4>
+				<pre>
+						<code>
+							let regexp = new RegExp("[a-z]{3}", "gi");
+												 or
+							let regexp = /[a-z]{3}/gi;
+						</code>
+					</pre>
+			</section>
+
+			<section>
+				<h4>creating a regular expression in JS</h4>
+				<pre>
+						<code>
+							let str = CreateRandomString();
+							let regexp = new RegExp(`${str}`, "gi");
+			
+							let regexp = /${str}/gi; -- will not work
+						</code>
+					</pre>
+			</section>
+
+			<section>CЛАЙД ПРО ЭКРАНИРОВАНИЕ при создании с помощью new RegExp</section>
+
+			<section style="font-size: 22px">
+				<h4>methods for working with regular expressions</h4>
+				<table>
+					<tr>
+						<th>Method</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>exec</td>
+						<td>RegExp method that searches for a match in a string. It returns an array of data.</td>
+					</tr>
+					<tr>
+						<td>test</td>
+						<td>RegExp method that tests for a match in a string. Returns either true or false.</td>
+					</tr>
+					<tr>
+						<td>match</td>
+						<td> Returns an array containing all of the matches, including capturing groups, or null if no match is
+							found.</td>
+					</tr>
+					<tr>
+						<td>matchAll</td>
+						<td>Returns an iterator containing all of the matches, including capturing groups.</td>
+					</tr>
+					<tr>
+						<td>replace</td>
+						<td>Executes a search for a match in a string, and replaces the matched substring with a replacement
+							substring.</td>
+					</tr>
+					<tr>
+						<td>replaceAll</td>
+						<td>Executes a search for all matches in a string, and replaces the matched substrings with a replacement
+							substring.</td>
+					</tr>
+					<tr>
+						<td>search</td>
+						<td>Tests for a match in a string. It returns the index of the match, or -1 if the search fails.</td>
+					</tr>
+					<tr>
+						<td>split</td>
+						<td>Uses a regular expression or a fixed string to break a string into an array of substrings.</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h4>Match method</h4>
+				<pre>
+						<code>
+				let str = "Humpbacked! Humpbacked!! I said humpbacked!!!";
+				console.log( str.match(/humpbacked/));
+						</code>
+					</pre>
+				<img src="./assets/matchExample1.PNG" alt="matchExample1">
+			</section>
+			<section>
+				<h4>Match method</h4>
+				<pre>
+						<code>
+				let str = "Humpbacked! Humpbacked!! I said humpbacked!!!";
+				console.log( str.match(/humpbacked/i));
+						</code>
+					</pre>
+				<img src="./assets/matchExample2.PNG" alt="matchExample2">
+			</section>
+
+
+			<section>
+				<h4>Match method</h4>
+				<pre>
+						<code>
+				let str = "Humpbacked! Humpbacked!! I said humpbacked!!!";
+				console.log( str.match(/humpbacked/gi));
+						</code>
+					</pre>
+				<img src="./assets/matchExample3.PNG" alt="matchExample3">
+			</section>
+
+			<section>
+				<h4>Match method</h4>
+				<pre>
+						<code>
+				let str = "Humpbacked! Humpbacked!! I said humpbacked!!!";
+				console.log( str.match(/Humpbacked/g));
+						</code>
+					</pre>
+				<img src="./assets/matchExample4.PNG" alt="matchExample4">
+			</section>
+
+			<section>
+				<h4>Match method</h4>
+				<pre>
+						<code>
+				let str = "Humpbacked! Humpbacked!! I said humpbacked!!!";
+				console.log(str.match(/Fox/g));
+						</code>
+					</pre>
+				<img src="./assets/matchExample5.PNG" alt="matchExample5">
+			</section>
+
+
+			<section>
+				<h4>Replace method</h4>
+				<pre>
+						<code>
+							let str = "never say never";
+							console.log(str.replace(/never/, 'always'));
+						</code>
+					</pre>
+				<img src="./assets/replaceExample1.PNG" alt="replaceExample1">
+			</section>
+
+			<section style="font-size: 28px;">
+				<h4>Replace method</h4>
+				<pre>
+						<code>
+							let str = "never say never";
+							console.log(str.replace(/Never/, 'always'));
+						</code>
+					</pre>
+				<img src="./assets/replaceExample2_1.PNG" alt="replaceExample2_1">
+				<pre>
+						<code>
+							let str = "never say never";
+							console.log(str.replace(/Never/i, 'always'));
+						</code>
+					</pre>
+				<img src="./assets/replaceExample2_2.PNG" alt="replaceExample2_2">
+			</section>
+
+
+			<section>
+				<h4>Replace method</h4>
+				<pre>
+						<code>
+							let str = "never say never";
+							console.log(str.replace(/Never/gi, 'always'));
+						</code>
+					</pre>
+				<img src="./assets/replaceExample3.PNG" alt="replaceExample3">
+			</section>
+
+			<section style="font-size: 26px">
+				<h4>special character combinations for replace method</h4>
+				<table>
+					<tr>
+						<th>Symbols</th>
+						<th>Action in the replacement string</th>
+					</tr>
+					<tr>
+						<td>$&</td>
+						<td>inserts the whole match</td>
+					</tr>
+					<tr>
+						<td>$`</td>
+						<td>inserts a part of the string before the match</td>
+					</tr>
+					<tr>
+						<td>$'</td>
+						<td>inserts a part of the string after the match</td>
+					</tr>
+					<tr>
+						<td>$n</td>
+						<td>if n is a 1-2 digit number, then it inserts the contents of n-th parentheses <span
+								style="color: #b13b3b;">*</span></td>
+					</tr>
+					<tr>
+						<td>$&lt;name&gt;</td>
+						<td>inserts the contents of the parentheses with the given name <span style="color: #b13b3b;">*</span></td>
+					</tr>
+					<tr>
+						<td>$$</td>
+						<td>inserts character $</td>
+					</tr>
+				</table>
+				<div><span style="color: #804545;">* - about Capturing groups - a little later</span></div>
+			</section>
+
+			<section>
+				<h4>Replace method special characters</h4>
+				<pre>
+						<code style="font-size: 18px;">
+	let str = "I love you";
+	console.log(str.replace(/you/gi, `$& anyway`)); /* replacing "you" for "you anyway" */
+						</code>
+					</pre>
+				<img src="./assets/replaceCharacters1.PNG" alt="replaceCharacters1">
+			</section>
+
+			<section style="font-size: 27px;">
+				<h4>Replace method special characters</h4>
+				<pre>
+						<code style="font-size: 17px;">
+	let str = "I love you";
+	console.log(str.replace(/you/gi, '$` anyway')); /* replacing "you" for "I love anyway" */
+						</code>
+					</pre>
+				<img src="./assets/replaceCharacters2_1.PNG" alt="replaceCharacters2_1">
+				<pre>
+						<code style="font-size: 17px;">
+	let str = "I love you";
+	console.log(str.replace(/love/gi, `$' anyway`)); /* replacing "love" for "you anyway" */
+						</code>
+					</pre>
+				<img src="./assets/replaceCharacters2_2.PNG" alt="replaceCharacters2_2">
+			</section>
+
+			<section>
+				<h4>Test method</h4>
+				<pre>
+						<code>
+						let str = "ride till i can't no more";
+						let regexp1 = /ride/;
+						let regexp2 = /lay/;
+						
+						console.log( regexp1.test(str) ); /*true*/
+						console.log( regexp2.test(str) ); /*false*/
+						</code>
+					</pre>
+				<img src="./assets/testMethod1.PNG" alt="testMethod1">
+			</section>
+
+			<section>
+				<h4>Test method</h4>
+				<pre>
+						<code>
+						let str = "ride till i can't no more";
+						let regexp1 = /RIDE/;
+						let regexp2 = /RIDE/i;
+						
+						console.log( regexp1.test(str) ); /*false*/
+						console.log( regexp2.test(str) ); /*true*/
+						</code>
+					</pre>
+				<img src="./assets/testMethod2.PNG" alt="testMethod2">
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
